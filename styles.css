@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6.25rem;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+#nav ul {
+    display: flex;
+    gap: 1.25rem;
+    list-style-type: none;
+}
+
+#nav ul a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+}
+
+#logo img {
+    height: 4.3rem;
+    width: 4.3rem;
+}
+
+#section1 {
+    display: flex;
+    flex-direction: column;
+}
+
+#section1 #upper {
+    background-image: url('https://t3.ftcdn.net/jpg/04/29/35/62/240_F_429356296_CVQ5LkC6Pl55kUNLqLisVKgTw9vjyif1.jpg');
+    height: 38rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+#upper .hero {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 70vw;
+    padding: 2rem 8rem;
+}
+
+#upper .hero h1 {
+    font-size: 4rem;
+    color: white;
+}
+
+#upper .hero input {
+    width: 25%;
+    height: 3.4rem;
+    border: none;
+    background-color: red;
+    color: white;
+}
+
+#upper .hero input:hover {
+    background-color: rgb(215, 30, 30);
+    cursor: pointer;
+}
+
+#section1 #lower {
+    height: 25rem;
+    display: flex;
+}
+
+
+#section1 #lower .forMen {
+    background-image: url('https://www.healthdigest.com/img/gallery/the-male-celebrity-workout-routine-people-are-most-likely-to-try-exclusive-survey/intro-1663175120.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#section1 #lower .forWomen {
+    background-image: url('https://www.dmoose.com/cdn/shop/articles/Main_Image_c34524b2-86f3-4c60-92fa-2e9d67beccf5.jpg?v=1668438961');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#section1 #lower .training {
+    height: 100%;
+    padding: 1rem;
+}
+
+#section1 #lower .training div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    height: 100%;
+    padding: .1rem 4rem;
+}
+
+#section1 #lower .training div h1 {
+    font-size: 3rem;
+    color: white;
+}
+
+#section1 #lower .training div p {
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+#section1 #lower .training button {
+    color: white;
+    border: 2px solid red;
+    background-color: transparent;
+    padding: 1rem 2rem;
+}
+
+#section1 #lower .training button:hover {
+    background-color: red;
+}
+
+#section1 #lower .training div:hover {
+    border: 2px solid grey;
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 6rem 10rem;
+}
+
+#about h1 {
+    font-size: 3rem;
+}
+
+#about h6 {
+    font-size: 1.1rem;
+    color: red;
+}
+
+#about p {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+#about #aboutImg {
+    background-image: url('https://blog.johnsonfitness.com/wp-content/uploads/2015/11/iStock_000042278894_Full-2-1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+}
+
+#weOffer {
+    display: flex;
+}
+
+#weOffer div {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 7rem;
+}
+
+#weOffer #pT {
+    background-image: url('https://t4.ftcdn.net/jpg/03/33/91/97/360_F_333919715_R1mDUWPgwB2CRvSCNnvnmtn64gPY40ZL.jpg');
+
+}
+
+#weOffer #bC {
+    background-image: url('https://t3.ftcdn.net/jpg/06/36/86/24/360_F_636862479_8XQVLP1nmM7j8dkuMezcHmVVYebl0x1a.jpg');
+
+}
+
+#weOffer #oP {
+    background-image: url('https://t3.ftcdn.net/jpg/04/29/29/02/360_F_429290227_rLWmbkSY2Zj7DFmPMjmwowzoBESUEjVw.jpg');
+
+}
+
+#weOffer div h1 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+#weOffer div p {
+    color: white;
+    border-left: 2px solid red;
+    padding-left: 1rem;
+    font-size: 1.2rem;
+}
+
+#weOffer div button {
+    width: 10rem;
+    color: white;
+    border: 2px solid red;
+    background-color: transparent;
+    padding: 1rem 2rem;
+}
+
+#weOffer div button:hover {
+    background-color: red;
+}
+
+#priceTable {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 7rem;
+}
+
+#priceTable > h1{
+    text-align: center;
+    font-size: 3rem;
+}
+
+#priceTable >p{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+
+
+.price_card_container {
+    display: flex;
+    gap: 1rem;
+}
+
+
+.priceCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cardInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 6rem 1rem 0 6rem;
+}
+
+.girl {
+    background-image: url('https://t4.ftcdn.net/jpg/05/38/57/69/360_F_538576932_XZMfwkrBHKoSu3ZeAqWleoKDVja2qomw.jpg');
+}
+
+.man {
+    background-image: url('https://img.freepik.com/premium-photo/muscular-man-back-view-bodybuilder-athlete-dark-background-ai-generative_407474-13104.jpg');
+}
+
+.priceCard h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    color: white;
+}
+
+.priceCard h3 {
+    font-size: 2rem;
+    font-weight: 200;
+    color: red;
+}
+
+.priceCard p {
+    font-size: 1rem;
+    color: white;
+}
+
+.priceCard h4 {
+    color: white;
+}
+
+.priceCard ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    list-style: square;
+}
+
+.priceCard ul li {
+    color: white;
+}
+
+.priceCard button{
+    height: 5rem;
+    border: none;
+    background-color: red;
+    color: white;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.priceCard button:hover{
+    background-color: rgb(215, 30, 30);
+}
