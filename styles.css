@@ -9,7 +9,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 6.25rem;
+    padding: 0 6vw;
 }
 
 #logo {
@@ -19,7 +19,7 @@ header {
 
 #nav ul {
     display: flex;
-    gap: 1.25rem;
+    gap: 1vw;
     list-style-type: none;
 }
 
@@ -32,8 +32,8 @@ a:hover {
 }
 
 #logo img {
-    height: 4.3rem;
-    width: 4.3rem;
+    height: 68px;
+    width: 68px;
 }
 
 #section1 {
@@ -43,7 +43,7 @@ a:hover {
 
 #section1 #upper {
     background-image: url('https://t3.ftcdn.net/jpg/04/29/35/62/240_F_429356296_CVQ5LkC6Pl55kUNLqLisVKgTw9vjyif1.jpg');
-    height: 38rem;
+    height: 608px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -54,19 +54,19 @@ a:hover {
 #upper .hero {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 16px;
     width: 70vw;
-    padding: 2rem 8rem;
+    padding: 32px 128px;
 }
 
 #upper .hero h1 {
-    font-size: 4rem;
+    font-size: 52px;
     color: white;
 }
 
 #upper .hero input {
     width: 25%;
-    height: 3.4rem;
+    height: 54px;
     border: none;
     background-color: red;
     color: white;
@@ -78,7 +78,7 @@ a:hover {
 }
 
 #section1 #lower {
-    height: 25rem;
+    height: 400px;
     display: flex;
 }
 
@@ -99,7 +99,7 @@ a:hover {
 
 #section1 #lower .training {
     height: 100%;
-    padding: 1rem;
+    padding: 16px;
 }
 
 #section1 #lower .training div {
@@ -107,19 +107,19 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 32px;
     height: 100%;
-    padding: .1rem 4rem;
+    padding: 2px 64px;
 }
 
 #section1 #lower .training div h1 {
-    font-size: 3rem;
+    font-size: 48px;
     color: white;
 }
 
 #section1 #lower .training div p {
     color: white;
-    font-size: 1.5rem;
+    font-size: 24px;
     text-align: center;
 }
 
@@ -128,7 +128,7 @@ a:hover {
     color: white;
     border: 2px solid red;
     background-color: transparent;
-    padding: 1rem 2rem;
+    padding: 16px 32px;
 }
 
 #section1 #lower .training button:hover {
@@ -143,21 +143,21 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
-    padding: 6rem 10rem;
+    gap: 32px;
+    padding: 96px 160px;
 }
 
 #about h1 {
-    font-size: 3rem;
+    font-size: 48px;
 }
 
 #about h6 {
-    font-size: 1.1rem;
+    font-size: 18px;
     color: red;
 }
 
 #about p {
-    font-size: 1.5rem;
+    font-size: 24px;
     text-align: center;
 }
 
@@ -168,7 +168,7 @@ a:hover {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 30rem;
+    height: 480px;
 }
 
 #weOffer {
@@ -182,8 +182,8 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1.5rem;
-    padding: 7rem;
+    gap: 24px;
+    padding: 90px;
 }
 
 #weOffer #pT {
@@ -203,23 +203,23 @@ a:hover {
 
 #weOffer div h1 {
     color: white;
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 200;
 }
 
 #weOffer div p {
     color: white;
     border-left: 2px solid red;
-    padding-left: 1rem;
-    font-size: 1.2rem;
+    padding-left: 16px;
+    font-size: 19px;
 }
 
 #weOffer div button {
-    width: 10rem;
+    width: 160px;
     color: white;
     border: 2px solid red;
     background-color: transparent;
-    padding: 1rem 2rem;
+    padding: 16px 32px;
 }
 
 #weOffer div button:hover {
@@ -229,8 +229,8 @@ a:hover {
 #priceTable {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    padding: 7rem;
+    gap: 24px;
+    padding: 112px;
 }
 
 #priceTable > h1{
@@ -248,7 +248,7 @@ a:hover {
 
 .price_card_container {
     display: flex;
-    gap: 1rem;
+    gap: 16px;
 }
 
 
@@ -256,7 +256,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 40rem;
+    height: 640px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -265,8 +265,8 @@ a:hover {
 .cardInfo{
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    margin: 6rem 1rem 0 6rem;
+    gap: 24px;
+    margin: 96px 16px 0 96px;
 }
 
 .girl {
@@ -301,7 +301,7 @@ a:hover {
 .priceCard ul {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 24px;
     list-style: square;
 }
 
@@ -310,7 +310,7 @@ a:hover {
 }
 
 .priceCard button{
-    height: 5rem;
+    height: 80px;
     border: none;
     background-color: red;
     color: white;
