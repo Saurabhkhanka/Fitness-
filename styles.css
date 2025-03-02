@@ -2,167 +2,164 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: black;
+    /* color: black; */
 }
 
-header {
+.nav-bar {
+    width: 100vw;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 6vw;
+    padding: 0 3vw;
 }
 
-#logo {
+.nav-bar .logo {
     display: flex;
     align-items: center;
 }
 
-#nav ul {
+.nav-bar .logo img {
+    height: 5vw;
+    width: 5vw;
+}
+
+.nav-bar ul {
     display: flex;
-    gap: 1vw;
+    gap: 40px;
+    align-items: center;
     list-style-type: none;
-}
-
-#nav ul a {
     text-decoration: none;
 }
 
-a:hover {
-    color: red;
+.nav-bar ul a {
+    text-decoration: none;
+    color: black;
 }
 
-#logo img {
-    height: 68px;
-    width: 68px;
+.nav-bar ul a:hover {
+    color: #BA0A08;
 }
 
-#section1 {
-    display: flex;
-    flex-direction: column;
-}
+/* nav end */
 
-#section1 #upper {
+.front {
+    height: calc(100vh - 60px);
     background-image: url('https://t3.ftcdn.net/jpg/04/29/35/62/240_F_429356296_CVQ5LkC6Pl55kUNLqLisVKgTw9vjyif1.jpg');
-    height: 90vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    align-items: center;
+    position: relative;
 }
 
-#upper .hero {
+.front .discription-front {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 50vw;
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    width: 70vw;
-    padding: 32px 128px;
+    justify-content: center;
 }
 
-#upper .hero h1 {
+.front .discription-front h1 {
     font-size: 52px;
     color: white;
 }
 
-#upper .hero input {
+.front .discription-front button {
     width: 25%;
-    height: 54px;
+    height: 3.5rem;
     border: none;
-    background-color: red;
+    /* background-color: red; */
+    background-color: transparent;
+    border: 1px solid #BA0A08;
     color: white;
 }
 
-#upper .hero input:hover {
-    background-color: rgb(215, 30, 30);
-    cursor: pointer;
-}
 
-#section1 #lower {
-    height: 400px;
+
+/* front ends here */
+
+.gender {
     display: flex;
+    color: white;
+}
+.gender .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+    border: 2px solid black;
 }
 
+.gender .box:hover{
+    border: 2px solid #BA0A08;
+}
 
-#section1 #lower .forMen {
+.gender .box h1{
+    font-size: 48px;
+}
+
+.gender .box p{
+    font-size: 24px;
+    text-align: center;
+}
+
+.gender .box button{
+    color: white;
+    border: 2px solid #BA0A08;
+    background-color: transparent;
+    padding: 16px 32px;
+}
+
+.gender .men {
     background-image: url('https://www.healthdigest.com/img/gallery/the-male-celebrity-workout-routine-people-are-most-likely-to-try-exclusive-survey/intro-1663175120.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-#section1 #lower .forWomen {
+.gender .women {
     background-image: url('https://www.dmoose.com/cdn/shop/articles/Main_Image_c34524b2-86f3-4c60-92fa-2e9d67beccf5.jpg?v=1668438961');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-#section1 #lower .training {
-    height: 100%;
-    padding: 16px;
-}
 
-#section1 #lower .training div {
+/* gender end */
+
+
+.about{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 32px;
-    height: 100%;
-    padding: 2px 64px;
 }
 
-#section1 #lower .training div h1 {
-    font-size: 48px;
-    color: white;
-}
-
-#section1 #lower .training div p {
-    color: white;
-    font-size: 24px;
-    text-align: center;
-}
-
-
-#section1 #lower .training button {
-    color: white;
-    border: 2px solid red;
-    background-color: transparent;
-    padding: 16px 32px;
-}
-
-#section1 #lower .training button:hover {
-    background-color: red;
-}
-
-#section1 #lower .training div:hover {
-    border: 2px solid grey;
-}
-
-#about {
+.about .desc{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 32px;
+    gap: 5px;
     padding: 96px 160px;
 }
 
-#about h1 {
-    font-size: 48px;
+.about h1 {
+    font-size: 3rem;
 }
 
-#about h6 {
-    font-size: 18px;
-    color: red;
+.about h6 {
+    font-size: 1rem;
+    color: #BA0A08;
 }
 
-#about p {
-    font-size: 24px;
+.about p {
+    font-size: 1.5rem;
     text-align: center;
 }
 
-
-#about #aboutImg {
+.about .about-img{
     background-image: url('https://blog.johnsonfitness.com/wp-content/uploads/2015/11/iStock_000042278894_Full-2-1.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -171,11 +168,22 @@ a:hover {
     height: 480px;
 }
 
-#weOffer {
+/* about ends here */
+
+.we-offer{
     display: flex;
 }
+.we-offer .pT{
+    background-image: url('https://t4.ftcdn.net/jpg/03/33/91/97/360_F_333919715_R1mDUWPgwB2CRvSCNnvnmtn64gPY40ZL.jpg');
+}
+.we-offer .bC{
+    background-image: url('https://t3.ftcdn.net/jpg/06/36/86/24/360_F_636862479_8XQVLP1nmM7j8dkuMezcHmVVYebl0x1a.jpg');
+}
+.we-offer .oP{
+    background-image: url('https://t3.ftcdn.net/jpg/04/29/29/02/360_F_429290227_rLWmbkSY2Zj7DFmPMjmwowzoBESUEjVw.jpg');
+}
 
-#weOffer div {
+.we-offer .box{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -186,65 +194,50 @@ a:hover {
     padding: 90px;
 }
 
-#weOffer #pT {
-    background-image: url('https://t4.ftcdn.net/jpg/03/33/91/97/360_F_333919715_R1mDUWPgwB2CRvSCNnvnmtn64gPY40ZL.jpg');
-
-}
-
-#weOffer #bC {
-    background-image: url('https://t3.ftcdn.net/jpg/06/36/86/24/360_F_636862479_8XQVLP1nmM7j8dkuMezcHmVVYebl0x1a.jpg');
-
-}
-
-#weOffer #oP {
-    background-image: url('https://t3.ftcdn.net/jpg/04/29/29/02/360_F_429290227_rLWmbkSY2Zj7DFmPMjmwowzoBESUEjVw.jpg');
-
-}
-
-#weOffer div h1 {
+.we-offer .box h1{
     color: white;
     font-size: 32px;
     font-weight: 200;
 }
 
-#weOffer div p {
+.we-offer .box p{
     color: white;
-    border-left: 2px solid red;
+    border-left: 2px solid #BA0A08;
     padding-left: 16px;
     font-size: 19px;
 }
 
-#weOffer div button {
+.we-offer .box button{
     width: 160px;
     color: white;
-    border: 2px solid red;
+    border: 2px solid #BA0A08;
     background-color: transparent;
     padding: 16px 32px;
 }
 
-#weOffer div button:hover {
-    background-color: red;
-}
 
-#priceTable {
+
+/* we offer ends herer */
+
+
+.price-table{
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 24px;
     padding: 112px;
 }
 
-#priceTable > h1{
+.price-table>h1{
     text-align: center;
     font-size: 3rem;
 }
 
-#priceTable >p{
+.price-table>p{
     text-align: center;
     font-size: 1.5rem;
     font-weight: 100;
 }
-
-
 
 .price_card_container {
     display: flex;
@@ -252,7 +245,7 @@ a:hover {
 }
 
 
-.priceCard{
+.price_card_container .priceCard{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -262,19 +255,18 @@ a:hover {
     background-size: cover;
 }
 
-.cardInfo{
+.price_card_container .women{
+    background-image: url('https://t4.ftcdn.net/jpg/05/38/57/69/360_F_538576932_XZMfwkrBHKoSu3ZeAqWleoKDVja2qomw.jpg');
+}
+.price_card_container .men{
+    background-image: url('https://img.freepik.com/premium-photo/muscular-man-back-view-bodybuilder-athlete-dark-background-ai-generative_407474-13104.jpg');
+}
+
+.cardInfo {
     display: flex;
     flex-direction: column;
     gap: 24px;
     margin: 96px 16px 0 96px;
-}
-
-.girl {
-    background-image: url('https://t4.ftcdn.net/jpg/05/38/57/69/360_F_538576932_XZMfwkrBHKoSu3ZeAqWleoKDVja2qomw.jpg');
-}
-
-.man {
-    background-image: url('https://img.freepik.com/premium-photo/muscular-man-back-view-bodybuilder-athlete-dark-background-ai-generative_407474-13104.jpg');
 }
 
 .priceCard h1 {
@@ -309,15 +301,11 @@ a:hover {
     color: white;
 }
 
-.priceCard button{
+.priceCard button {
     height: 80px;
     border: none;
     background-color: red;
     color: white;
     font-size: 2rem;
     font-weight: 900;
-}
-
-.priceCard button:hover{
-    background-color: rgb(215, 30, 30);
 }
