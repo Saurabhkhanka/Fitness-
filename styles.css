@@ -19,7 +19,7 @@
 }
 
 .btn:hover {
-  background-color: #BA0A08;
+  background-color: #BA0A08 !important;
 }
 
 
