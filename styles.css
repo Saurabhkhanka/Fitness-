@@ -13,6 +13,11 @@
     padding: 0 3vw;
 }
 
+
+button:hover {
+  background-color: #BA0A08;
+}
+
 .nav-bar .logo {
     display: flex;
     align-items: center;
