@@ -18,6 +18,10 @@ button:hover {
   background-color: #BA0A08;
 }
 
+button {
+  cursor: pointer;
+}
+
 .nav-bar .logo {
     display: flex;
     align-items: center;
