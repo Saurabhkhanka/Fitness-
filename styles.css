@@ -13,14 +13,15 @@
     padding: 0 3vw;
 }
 
+.btn {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
 .btn:hover {
   background-color: #BA0A08;
 }
 
-button {
-  cursor: pointer;
-}
 
 .nav-bar .logo {
     display: flex;
