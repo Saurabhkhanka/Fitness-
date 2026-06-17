@@ -1,321 +1,862 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap');
+
+:root {
+    --primary: #E50914;
+    --primary-hover: #ff1f29;
+    --dark-bg: #0c0c0c;
+    --dark-card: #161616;
+    --dark-card-hover: #1e1e1e;
+    --text-main: #ffffff;
+    --text-muted: #aaaaaa;
+    --font-family: 'Outfit', sans-serif;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --border-color: rgba(255, 255, 255, 0.08);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* color: black; */
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-main);
+    font-family: var(--font-family);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Button Reset & Common Styling */
+.btn {
+    cursor: pointer;
+    font-family: var(--font-family);
+    transition: var(--transition);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* Navbar */
 .nav-bar {
-    width: 100vw;
+    width: 100%;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 3vw;
+    padding: 0 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(12, 12, 12, 0.8);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border-color);
 }
-
-.btn {
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #BA0A08 !important;
-}
-
 
 .nav-bar .logo {
     display: flex;
     align-items: center;
+    gap: 12px;
 }
 
 .nav-bar .logo img {
-    height: 5vw;
-    width: 5vw;
+    height: 48px;
+    width: 48px;
+    object-fit: contain;
+}
+
+#logoText h1 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    color: var(--text-main);
+    line-height: 1;
+}
+
+#logoText p {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--primary);
+    margin-top: 2px;
 }
 
 .nav-bar ul {
     display: flex;
-    gap: 40px;
+    gap: 32px;
     align-items: center;
-    list-style-type: none;
-    text-decoration: none;
+    list-style: none;
 }
 
 .nav-bar ul a {
     text-decoration: none;
-    color: black;
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    transition: var(--transition);
+    position: relative;
+    padding: 8px 0;
+}
+
+.nav-bar ul a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: var(--transition);
 }
 
 .nav-bar ul a:hover {
-    color: #BA0A08;
+    color: var(--primary);
 }
 
-/* nav end */
+.nav-bar ul a:hover::after {
+    width: 100%;
+}
 
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.mobile-menu-btn .bar {
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-main);
+    transition: var(--transition);
+}
+
+/* Nav Bar End */
+
+/* Hero Section */
 .front {
-    height: calc(100vh - 60px);
-    background-image: url('https://t3.ftcdn.net/jpg/04/29/35/62/240_F_429356296_CVQ5LkC6Pl55kUNLqLisVKgTw9vjyif1.jpg');
+    height: calc(100vh - 80px);
+    background: linear-gradient(rgba(12, 12, 12, 0.4), rgba(12, 12, 12, 0.9)), 
+                url('https://t3.ftcdn.net/jpg/04/29/35/62/240_F_429356296_CVQ5LkC6Pl55kUNLqLisVKgTw9vjyif1.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
 }
 
 .front .discription-front {
-    position: absolute;
-    top: 20%;
-    left: 10%;
-    width: 50vw;
+    max-width: 650px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    gap: 32px;
 }
 
 .front .discription-front h1 {
-    font-size: 52px;
-    color: white;
+    font-size: 4.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    color: var(--text-main);
 }
 
 .front .discription-front button {
-    width: 25%;
-    height: 3.5rem;
-    border: none;
-    /* background-color: red; */
-    background-color: transparent;
-    border: 1px solid #BA0A08;
-    color: white;
+    align-self: flex-start;
+    padding: 18px 36px;
+    font-size: 1rem;
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+    color: var(--text-main);
+    border-radius: 4px;
+    box-shadow: 0 8px 20px rgba(229, 9, 20, 0.3);
 }
 
+.front .discription-front button:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(229, 9, 20, 0.5);
+}
 
-
-/* front ends here */
-
+/* Gender Section */
 .gender {
     display: flex;
-    color: white;
+    width: 100%;
+    min-height: 600px;
 }
-.gender .box{
+
+.gender .box {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 40px;
-    padding: 40px;
-    border: 2px solid black;
-}
-
-.gender .box:hover{
-    border: 2px solid #BA0A08;
-}
-
-.gender .box h1{
-    font-size: 48px;
-}
-
-.gender .box p{
-    font-size: 24px;
+    gap: 24px;
+    padding: 80px 10%;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
     text-align: center;
 }
 
-.gender .box button{
-    color: white;
-    border: 2px solid #BA0A08;
-    background-color: transparent;
-    padding: 16px 32px;
-}
-
 .gender .men {
-    background-image: url('https://www.healthdigest.com/img/gallery/the-male-celebrity-workout-routine-people-are-most-likely-to-try-exclusive-survey/intro-1663175120.webp');
+    background: linear-gradient(rgba(12, 12, 12, 0.5), rgba(12, 12, 12, 0.85)), 
+                url('https://www.healthdigest.com/img/gallery/the-male-celebrity-workout-routine-people-are-most-likely-to-try-exclusive-survey/intro-1663175120.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .gender .women {
-    background-image: url('https://www.dmoose.com/cdn/shop/articles/Main_Image_c34524b2-86f3-4c60-92fa-2e9d67beccf5.jpg?v=1668438961');
+    background: linear-gradient(rgba(12, 12, 12, 0.5), rgba(12, 12, 12, 0.85)), 
+                url('women_class_bg.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-
-/* gender end */
-
-
-.about{
-    display: flex;
-    flex-direction: column;
+.gender .box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(229, 9, 20, 0.1);
+    opacity: 0;
+    transition: var(--transition);
+    z-index: 1;
 }
 
-.about .desc{
+.gender .box:hover::before {
+    opacity: 1;
+}
+
+.gender .box * {
+    position: relative;
+    z-index: 2;
+}
+
+.gender .box h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.gender .box p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 500px;
+    font-weight: 300;
+}
+
+.gender .box button {
+    color: var(--text-main);
+    border: 2px solid var(--primary);
+    background-color: transparent;
+    padding: 14px 32px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+}
+
+.gender .box button:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+/* About Us Section */
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 600px;
+    align-items: center;
+}
+
+.about .desc {
+    padding: 80px 12%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 5px;
-    padding: 96px 160px;
+    gap: 20px;
 }
 
 .about h1 {
     font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
 }
 
 .about h6 {
-    font-size: 1rem;
-    color: #BA0A08;
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .about p {
-    font-size: 1.5rem;
-    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    font-weight: 300;
+    text-align: left;
+    margin-top: 10px;
 }
 
-.about .about-img{
-    background-image: url('https://blog.johnsonfitness.com/wp-content/uploads/2015/11/iStock_000042278894_Full-2-1.jpg');
+.about .about-img {
+    height: 100%;
+    min-height: 480px;
+    background: linear-gradient(rgba(12, 12, 12, 0.1), rgba(12, 12, 12, 0.4)), 
+                url('about_gym_bg.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+/* Services (We Offer) */
+.we-offer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     width: 100%;
-    height: 480px;
 }
 
-/* about ends here */
-
-.we-offer{
-    display: flex;
-}
-.we-offer .pT{
-    background-image: url('https://t4.ftcdn.net/jpg/03/33/91/97/360_F_333919715_R1mDUWPgwB2CRvSCNnvnmtn64gPY40ZL.jpg');
-}
-.we-offer .bC{
-    background-image: url('https://t3.ftcdn.net/jpg/06/36/86/24/360_F_636862479_8XQVLP1nmM7j8dkuMezcHmVVYebl0x1a.jpg');
-}
-.we-offer .oP{
-    background-image: url('https://t3.ftcdn.net/jpg/04/29/29/02/360_F_429290227_rLWmbkSY2Zj7DFmPMjmwowzoBESUEjVw.jpg');
-}
-
-.we-offer .box{
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.we-offer .box {
+    min-height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 24px;
-    padding: 90px;
+    padding: 80px 12%;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
 }
 
-.we-offer .box h1{
-    color: white;
-    font-size: 32px;
-    font-weight: 200;
+.we-offer .pT {
+    background: linear-gradient(rgba(12, 12, 12, 0.6), rgba(12, 12, 12, 0.9)), 
+                url('https://t4.ftcdn.net/jpg/03/33/91/97/360_F_333919715_R1mDUWPgwB2CRvSCNnvnmtn64gPY40ZL.jpg');
 }
 
-.we-offer .box p{
-    color: white;
-    border-left: 2px solid #BA0A08;
-    padding-left: 16px;
-    font-size: 19px;
+.we-offer .bC {
+    background: linear-gradient(rgba(12, 12, 12, 0.6), rgba(12, 12, 12, 0.9)), 
+                url('https://t3.ftcdn.net/jpg/06/36/86/24/360_F_636862479_8XQVLP1nmM7j8dkuMezcHmVVYebl0x1a.jpg');
 }
 
-.we-offer .box button{
-    width: 160px;
-    color: white;
-    border: 2px solid #BA0A08;
-    background-color: transparent;
-    padding: 16px 32px;
+.we-offer .oP {
+    background: linear-gradient(rgba(12, 12, 12, 0.6), rgba(12, 12, 12, 0.9)), 
+                url('https://t3.ftcdn.net/jpg/04/29/29/02/360_F_429290227_rLWmbkSY2Zj7DFmPMjmwowzoBESUEjVw.jpg');
 }
 
-
-
-/* we offer ends herer */
-
-
-.price-table{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-    padding: 112px;
-}
-
-.price-table>h1{
-    text-align: center;
-    font-size: 3rem;
-}
-
-.price-table>p{
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 100;
-}
-
-.price_card_container {
-    display: flex;
-    gap: 16px;
-}
-
-
-.price_card_container .priceCard{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 640px;
+.we-offer .box, 
+.we-offer .box * {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.price_card_container .women{
-    background-image: url('https://t4.ftcdn.net/jpg/05/38/57/69/360_F_538576932_XZMfwkrBHKoSu3ZeAqWleoKDVja2qomw.jpg');
+.we-offer .box::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: var(--transition);
 }
-.price_card_container .men{
-    background-image: url('https://img.freepik.com/premium-photo/muscular-man-back-view-bodybuilder-athlete-dark-background-ai-generative_407474-13104.jpg');
+
+.we-offer .box:hover::before {
+    transform: scaleX(1);
+}
+
+.we-offer .box h1 {
+    color: var(--text-main);
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+
+.we-offer .box p {
+    color: var(--text-muted);
+    border-left: 3px solid var(--primary);
+    padding-left: 16px;
+    font-size: 1.05rem;
+    font-weight: 300;
+}
+
+.we-offer .box button {
+    width: 160px;
+    color: var(--text-main);
+    border: 2px solid var(--primary);
+    background-color: transparent;
+    padding: 14px 28px;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.we-offer .box button:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+/* Pricing Table */
+.price-table {
+    padding: 120px 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.price-table > h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.price-table > p {
+    text-align: center;
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    font-weight: 300;
+    max-width: 700px;
+    margin-bottom: 40px;
+}
+
+.price_card_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.price_card_container .priceCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 650px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: var(--transition);
+}
+
+.price_card_container .priceCard:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.price_card_container .women {
+    background: linear-gradient(rgba(12, 12, 12, 0.75), rgba(12, 12, 12, 0.95)), 
+                url('https://t4.ftcdn.net/jpg/05/38/57/69/360_F_538576932_XZMfwkrBHKoSu3ZeAqWleoKDVja2qomw.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.price_card_container .men {
+    background: linear-gradient(rgba(12, 12, 12, 0.75), rgba(12, 12, 12, 0.95)), 
+                url('https://img.freepik.com/premium-photo/muscular-man-back-view-bodybuilder-athlete-dark-background-ai-generative_407474-13104.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .cardInfo {
+    padding: 60px 48px 24px 48px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    margin: 96px 16px 0 96px;
+    gap: 20px;
 }
 
 .priceCard h1 {
-    font-size: 3rem;
-    font-weight: 400;
-    color: white;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--text-main);
+    letter-spacing: 0.5px;
 }
 
 .priceCard h3 {
-    font-size: 2rem;
-    font-weight: 200;
-    color: red;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary);
 }
 
 .priceCard p {
     font-size: 1rem;
-    color: white;
+    color: var(--text-muted);
+    font-weight: 300;
+    line-height: 1.5;
 }
 
 .priceCard h4 {
-    color: white;
+    color: var(--text-main);
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-top: 10px;
 }
 
 .priceCard ul {
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    list-style: square;
+    gap: 14px;
+    list-style: none;
+    margin-top: 5px;
 }
 
 .priceCard ul li {
-    color: white;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    position: relative;
+    padding-left: 28px;
+    font-weight: 300;
 }
 
-.priceCard button {
-    height: 80px;
-    border: none;
-    background-color: red;
-    color: white;
-    font-size: 2rem;
+.priceCard ul li::before {
+    content: '✓';
+    color: var(--primary);
     font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: -1px;
+}
+
+.priceCard .btn-wrap {
+    padding: 0 48px 48px 48px;
+}
+
+.priceCard .btn {
+    width: 100%;
+    height: 56px;
+    border: none;
+    background-color: var(--primary);
+    color: var(--text-main);
+    font-size: 1rem;
+    font-weight: 800;
+    border-radius: 4px;
+}
+
+.priceCard .btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(229, 9, 20, 0.3);
+}
+
+/* Footer Section */
+.footer {
+    background-color: #060606;
+    border-top: 1px solid var(--border-color);
+    padding: 80px 8% 30px 8%;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.2fr 1.2fr;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.footer-col h4 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--text-main);
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.footer-col h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--primary);
+}
+
+.footer-col.brand .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-col.brand .logo img {
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+}
+
+#footerLogoText h3 {
+    font-size: 1.3rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+#footerLogoText p {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--primary);
+    margin-top: 2px;
+}
+
+.footer-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 300;
+}
+
+.social-links {
+    display: flex;
+    gap: 16px;
+}
+
+.social-link {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 800;
+    transition: var(--transition);
+}
+
+.social-link:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: var(--text-main);
+    transform: translateY(-3px);
+}
+
+.footer-col.links ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-col.links ul a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 300;
+    transition: var(--transition);
+}
+
+.footer-col.links ul a:hover {
+    color: var(--primary);
+    padding-left: 6px;
+}
+
+.footer-col.contact-info p,
+.footer-col.hours p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 300;
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border-color);
+    margin-top: 60px;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #666666;
+    font-size: 0.85rem;
+    font-weight: 300;
+}
+
+/* Responsiveness Media Queries */
+
+@media (max-width: 1200px) {
+    .front .discription-front h1 {
+        font-size: 3.8rem;
+    }
+    .gender .box h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav-bar {
+        padding: 0 4%;
+    }
+    
+    .front .discription-front h1 {
+        font-size: 3.2rem;
+    }
+    
+    .gender {
+        flex-direction: column;
+    }
+    
+    .gender .box {
+        padding: 60px 8%;
+        min-height: 450px;
+    }
+    
+    .about {
+        grid-template-columns: 1fr;
+    }
+    
+    .about .about-img {
+        min-height: 400px;
+    }
+    
+    .about .desc {
+        padding: 60px 8%;
+    }
+    
+    .we-offer {
+        grid-template-columns: 1fr;
+    }
+    
+    .we-offer .box {
+        min-height: 400px;
+        padding: 60px 8%;
+    }
+    
+    .price_card_container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .price-table {
+        padding: 80px 6%;
+    }
+    
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+    
+    .footer {
+        padding: 60px 6% 30px 6%;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile Menu Drawer Toggle */
+    .mobile-menu-btn {
+        display: flex;
+    }
+    
+    .nav-bar ul {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: #0c0c0cec;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        transform: translateY(-101%);
+        transition: transform 0.4s ease-in-out;
+        z-index: 999;
+        border-top: 1px solid var(--border-color);
+    }
+    
+    .nav-bar ul.active {
+        transform: translateY(0);
+    }
+    
+    .nav-bar ul a {
+        font-size: 1.3rem;
+    }
+
+    .mobile-menu-btn.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .mobile-menu-btn.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .mobile-menu-btn.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    .front {
+        padding: 0 6%;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .front .discription-front {
+        align-items: center;
+    }
+    
+    .front .discription-front h1 {
+        font-size: 2.6rem;
+    }
+    
+    .front .discription-front button {
+        align-self: center;
+    }
+    
+    .gender .box h1 {
+        font-size: 2.6rem;
+    }
+    
+    .about h1, .price-table > h1 {
+        font-size: 2.6rem;
+    }
+    
+    .priceCard h1 {
+        font-size: 1.8rem;
+    }
+    
+    .cardInfo {
+        padding: 40px 24px 20px 24px;
+    }
+    
+    .priceCard .btn-wrap {
+        padding: 0 24px 40px 24px;
+    }
+    
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
 }

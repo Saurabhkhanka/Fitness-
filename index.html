@@ -12,17 +12,24 @@
 <body>
     <nav class="nav-bar">
         <div class="logo">
-            <img src="logo.png" alt="">
+            <img src="logo.png" alt="Gym Fitness Studio Logo">
             <div id="logoText">
                 <h1>GYM</h1>
-                <p>FINTESS STUDIO</p>
+                <p>FITNESS STUDIO</p>
             </div>
         </div>
+        <button class="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
         <ul>
-            <li><a href="#">ABOUT US</a></li>
-            <li><a href="#">WHAT WE OFFER</a></li>
-            <li><a href="#">CONTACT US</a></li>
-            <li><a href="#">ALL BLOCKS</a></li>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#about">ABOUT US</a></li>
+            <li><a href="#classes">CLASSES</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#pricing">PRICING</a></li>
+            <li><a href="#contact">CONTACT</a></li>
         </ul>
     </nav>
     <!-- nav end -->
@@ -35,7 +42,7 @@
     </div>
 
     <!-- front ends here -->
-    <div class="gender">
+    <div class="gender" id="classes">
         <div class="men box">
             <h1>MEN CLASS</h1>
             <p>We have a philosophy when it comes to fitness. There are no shortcuts on the road to success.
@@ -52,29 +59,23 @@
         </div>
     </div>
 
-
-
-
     <!-- gender end -->
-    <div class="about">
+    <div class="about" id="about">
         <div class="desc">
             <h1>ABOUT US</h1>
             <h6>A PLACE FOR YOUR FITNESS GOAL</h6>
-            <p>Your personal trainer will wake up the monster inside you and turn you into the muscles machine. The
-                program includes also mental practices aimed at improving your health dramatically. Aside from the gym,
-                you can take advantage of pool, spa, sauna and other services in our center. We tend to provide the best
-                services on the market to guarantee 100% positive effect for our customers.
+            <p>Your personal trainer will wake up the monster inside you and turn you into a muscle machine. The
+                program includes mental practices aimed at improving your health dramatically. Aside from the gym,
+                you can take advantage of our pool, spa, sauna, and other services. We tend to provide the best
+                services on the market to guarantee a 100% positive effect for our customers.
             </p>
         </div>
         <div class="about-img"></div>
-
     </div>
-
 
     <!-- about ends here -->
 
-
-    <div class="we-offer">
+    <div class="we-offer" id="services">
         <div class="pT box">
             <h1>PERSONAL TRAINING</h1>
             <p>If you don’t like to work out with other clients of our center, you are welcome to hire a personal
@@ -90,39 +91,39 @@
 
         <div class="oP box">
             <h1>OLYMPIC POWERLIFTING</h1>
-            <p>Do you want to become a professional powerlifter? Go ahead and try yourslelf just right now.</p>
+            <p>Do you want to become a professional powerlifter? Go ahead and try yourself just right now.</p>
             <button class="btn">BOOK NOW</button>
         </div>
     </div>
 
     <!-- we offer ends here  -->
 
-    <div class="price-table">
+    <div class="price-table" id="pricing">
         <h1>OUR PRICING TABLE</h1>
         <p>Be active, healthy and happy with our unique programs for body & soul. Remember, the only bad workout is
             the one you didn’t do!</p>
         <div class="price_card_container">
             <div class="priceCard women">
-                <div class="cardInfo ">
-                    <h1>FITNESS FOR GIRL</h1>
+                <div class="cardInfo">
+                    <h1>FOR WOMEN</h1>
                     <h3>MONTHLY FEE</h3>
                     <p>Whether you visit us for fitness or functions, training or treatments, eating out or
                         entertainment, we put your health and well-being at the heart of everything we do. Be the
-                        girl
-                        at the gym that motivates everyone else to push a little harder.</p>
+                        girl at the gym that motivates everyone else to push a little harder.</p>
                     <h4>We offer various training programs at a competitive price:</h4>
                     <ul>
                         <li>Improve the flexibility of your joints and muscles with our stretch classes.</li>
                         <li>Enjoy 30-minute athletic and functional core strength workout to empower yourself.</li>
-                        <li>We have a time tested approach for tailoring each specific program for every trainee.
-                        </li>
+                        <li>We have a time tested approach for tailoring each specific program for every trainee.</li>
                     </ul>
                 </div>
-                <button>BUY NOW</button>
+                <div class="btn-wrap">
+                    <button class="btn">BUY NOW</button>
+                </div>
             </div>
             <div class="priceCard men">
-                <div class="cardInfo ">
-                    <h1>FITNESS FOR MAN</h1>
+                <div class="cardInfo">
+                    <h1>FOR MEN</h1>
                     <h3>MONTHLY FEE</h3>
                     <p>We get you fit for anything. We cater for all levels of fitness, from retiree with no
                         training experience to the elite professional athlete, and everything in between. Not all
@@ -134,16 +135,79 @@
                         <li>One-on-one sessions will allow you to integrate easily into regular classes.</li>
                     </ul>
                 </div>
-
-
-                <button>BUY NOW</button>
+                <div class="btn-wrap">
+                    <button class="btn">BUY NOW</button>
+                </div>
             </div>
         </div>
     </div>
 
-
     <!-- price table ends here -->
 
+    <!-- footer starts here -->
+    <footer class="footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-col brand">
+                <div class="logo">
+                    <img src="logo.png" alt="Gym Fitness Studio Logo">
+                    <div id="footerLogoText">
+                        <h3>GYM</h3>
+                        <p>FITNESS STUDIO</p>
+                    </div>
+                </div>
+                <p class="footer-desc">Your ultimate fitness destination. We build strength, character, and lifetime health through premium coaching and community support.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Facebook">FB</a>
+                    <a href="#" class="social-link" aria-label="Instagram">IG</a>
+                    <a href="#" class="social-link" aria-label="Twitter">TW</a>
+                    <a href="#" class="social-link" aria-label="YouTube">YT</a>
+                </div>
+            </div>
+            <div class="footer-col links">
+                <h4>QUICK LINKS</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#classes">Classes</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="footer-col contact-info">
+                <h4>GET IN TOUCH</h4>
+                <p>📍 123 Fitness Ave, Muscle Beach, CA</p>
+                <p>📞 +1 (555) 123-4567</p>
+                <p>✉️ info@fitnessstudio.com</p>
+            </div>
+            <div class="footer-col hours">
+                <h4>GYM HOURS</h4>
+                <p>Monday - Friday: 5:00 AM - 10:00 PM</p>
+                <p>Saturday: 6:00 AM - 8:00 PM</p>
+                <p>Sunday: 8:00 AM - 6:00 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 GYM FITNESS STUDIO. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navList = document.querySelector('.nav-bar ul');
+        const navLinks = document.querySelectorAll('.nav-bar ul a');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navList.classList.toggle('active');
+            mobileMenuBtn.classList.toggle('active');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('active');
+                mobileMenuBtn.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 
 </html>
